@@ -25,7 +25,7 @@ const SideNav = () => {
         {
             name:'Setting',
             icon:Settings,
-            path:'/dashboard/setting'
+            path:'/dashboard/settings'
         },
     ]
 
@@ -41,7 +41,7 @@ const SideNav = () => {
         <hr className='my-6 border' />
         <div className='mt-3'>
             {MenuList.map((menu, index) => (
-                <Link href={menu.path}>
+                <Link href={menu.path} key={index}>
                     <div className={`flex gap-2 mb-2 p-3 items-center hover:bg-primary hover:text-white rounded-lg cursor-pointer ${path==menu.path && 'bg-primary text-white'}`} key={index}>
                         <menu.icon className='h-6 w-6' />
                         <h2 className='text-lg'>{menu.name}</h2>
